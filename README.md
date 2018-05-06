@@ -1,6 +1,6 @@
 # PDTB-RST-Alignment
 
-The alignment table includes 6758 rows, equivalent to the number of PDTB relations that have been aligned with an RST relation from the RST-DT corpus. Columns of this table provide some basic information about the source relation extracted from PDTB, the target relation extracted from RST-DT, and finally the alignment between the two. These three gropups of columns will be introduced in this document. The mapping between relation instances from PDTB to RST-DT is one-to-many. This means that each PDTB relation is uniquely mapped to one RST relation, however, a given RST relation might have been selected as the best fit to more than one PDTB relation, thus might appear in more than one row of the table as the matched relation. Suspicious alignments are flagged in the paper using the last group of columns.  Please refer to the paper for detailed information on the mapping procedure as well as discussions on suspicious alignments.
+The alignment table includes 6758 rows, equivalent to the number of PDTB relations that have been aligned with an RST relation from the RST-DT corpus. Columns of this table provide some basic information about the source relation extracted from PDTB, the target relation extracted from RST-DT, and the quality of the alignment between the two. These three gropups of columns will be introduced in this document. The mapping between relation instances from PDTB to RST-DT is one-to-many. This means that each PDTB relation is uniquely mapped to one RST relation, however, a given RST relation might have been selected as the best fit to more than one PDTB relation, thus might appear in more than one row of the table as the matched relation. Suspicious alignments are flagged in the paper using the last group of columns.  Please refer to the paper for detailed information on the mapping procedure as well as discussions on suspicious alignments.
 
 ## PDTB columns
 The following columns provide some attributes of the PDTB relation in each row of the table:
@@ -74,31 +74,43 @@ The following columns provide some attributes of the RST relation matched with t
 Indicator for complex argument: whether the RST span aligned with the first argument of the PDTB relation is an RST relation itself (TRUE) or just an elementary discourse unit (FALSE) according to RST definitions.
 
 * **RST_Arg1Span:**
-The RST span aligned with the first argument of the PDTB relation. It can be a single number (if one EDU is covered) or a range (if multiple consecutive EDUs are covered.
+The RST span aligned with the first argument of the PDTB relation. It can be a single number (if one EDU is covered) or a range (if multiple consecutive EDUs are covered. Span numbering is according to RST segmentation.
+
+* **RST_Arg1Begin:**
+The charachter offset of the begining of the RST span matched with the first argument of the PDTB relation.
+
+* **RST_Arg1End:**
+The charachter offset of the end of the RST span matched with the first argument of the PDTB relation.
+
+* **RST_Arg1Text:**
+The text of the RST span matched with the first argument of the PDTB relation.
 
 * **RST_Arg1Diff:**
 Charachter difference between the text span of the first argument of the PDTB relation and the matched RST span.
-
-RST_Arg1Begin
-RST_Arg1End
-RST_Arg1Text
-
-
 
 * **RST_Arg2IsRelation:**
 Indicator for complex argument: whether the RST span aligned with the second argument of the PDTB relation is an RST relation itself (TRUE) or just an elementary discourse unit (FALSE) according to RST definitions.
 
 * **RST_Arg2Span:**
-The RST span aligned with the second argument of the PDTB relation. It can be a single number (if one EDU is covered) or a range (if multiple consecutive EDUs are covered.
+The RST span aligned with the second argument of the PDTB relation. It can be a single number (if one EDU is covered) or a range (if multiple consecutive EDUs are covered. Span numbering is according to RST segmentation.
+
+* **RST_Arg2Begin:**
+The charachter offset of the begining of the RST span matched with the second argument of the PDTB relation.
+
+* **RST_Arg2End:**
+The charachter offset of the end of the RST span matched with the second argument of the PDTB relation.
+
+* **RST_Arg2Text:**
+The text of the RST span matched with the second argument of the PDTB relation.
 
 * **RST_Arg2Diff:**
 Charachter difference between the text span of the second argument of the PDTB relation and the matched RST span.
 
+* **RST_RelationSpan:**
+The entire text span covered by the matched RST relation. This is a range in the form of (m,n) where n > m. Span numbering is according to RST segmentation.
 
-RST_Arg2Begin
-RST_Arg2End
-RST_Arg2Text
-RST_RelationSpan
+
+
 
 
 
