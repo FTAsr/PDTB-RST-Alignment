@@ -7,7 +7,7 @@ The mapping between relation instances from PDTB to RST-DT is one-to-many. This 
 ## PDTB columns
 The following columns provide some attributes of the PDTB relation in each row of the table:
 
-**WSJID:** 
+* **WSJID:** 
 ID of the WSJ article, i.e., the text file within the Penn Treebank where the PDTB relation was annotated.
 
 
