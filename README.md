@@ -109,10 +109,18 @@ Charachter difference between the text span of the second argument of the PDTB r
 * **RST_RelationSpan:**
 The entire text span covered by the matched RST relation. This is a range in the form of (m,n) where n > m. Span numbering is according to RST segmentation.
 
+* **RST_RelationName:**
+The name (type/sense) of the matched RST relation. 
 
 
+## Alignment qualification columns
+The following columns provide some information about the quality of the alignment obtained for each PDTB relation. These include integer and boolian features. Integer features provide some information about the structure of the RST relational tree aligned with the PDTB relation and boolean features are indicators of possible alignment mistakes, i.e., suspicious cases that were flagged during the automatic alignment procedure for furthur manual investigation. All of these features are extensively and visually explained in the paper, thus we only provide a brief definition of them in this document.
 
 
+* **Sats:**
+Number of intevening Satelite edges between the two RST spans considered as PDTB relational argument matches. This number is obtained by traversing the matched RST relation's sub-tree. 
 
-Sats	Nucs	arg1Sats	arg1Nucs	arg2Sats	arg2Nucs	RST_RelationName	revise	strictRevise	multiNucleiEncounters	multiNucleiRoot	attrEncounters	attrRoot	problemTraversing	sameunitTreatment
+* **Nucs:**
+
+arg1Sats	arg1Nucs	arg2Sats	arg2Nucs		revise	strictRevise	multiNucleiEncounters	multiNucleiRoot	attrEncounters	attrRoot	problemTraversing	sameunitTreatment
 
