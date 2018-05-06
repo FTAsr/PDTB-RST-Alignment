@@ -1,8 +1,6 @@
 # PDTB-RST-Alignment
 
-The alignment table includes 6758 rows, equivalent to the number of PDTB relations that have been aligned with an RST relation from the RST-DT corpus.
-Columns of this table provide some basic information about the source relation extracted from PDTB, the target relation extracted from RST-DT, and finally the alignment between the two such as the charachter differences between the aligned spans.
-The mapping between relation instances from PDTB to RST-DT is one-to-many. This means that each PDTB relation is uniquely mapped to one RST relation, however, a given RST relation might have been selected as the best fit to more than one PDTB relation. For more information on the aligning procedure, please refer to the paper.
+The alignment table includes 6758 rows, equivalent to the number of PDTB relations that have been aligned with an RST relation from the RST-DT corpus. Columns of this table provide some basic information about the source relation extracted from PDTB, the target relation extracted from RST-DT, and finally the alignment between the two. The mapping between relation instances from PDTB to RST-DT is one-to-many. This means that each PDTB relation is uniquely mapped to one RST relation, however, a given RST relation might have been selected as the best fit to more than one PDTB relation. For more information on the mapping procedure, please refer to the paper.
 
 ## PDTB columns
 The following columns provide some attributes of the PDTB relation in each row of the table:
@@ -67,4 +65,10 @@ The text spans (according to PDTB segmentations) included in the second argument
 
 * **PDTB_ArgOverlap:**
 Indicator for overlapping arguments within the PDTB relation: whether the two arguments covered any common charachters in the text.
+
+## RST columns
+The following columns provide some attributes of the RST relation matched with the PDTB relation in each row of the table:
+
+
+
 
