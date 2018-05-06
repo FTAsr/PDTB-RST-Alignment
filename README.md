@@ -114,3 +114,5 @@ The entire text span covered by the matched RST relation. This is a range in the
 
 
 
+Sats	Nucs	arg1Sats	arg1Nucs	arg2Sats	arg2Nucs	RST_RelationName	revise	strictRevise	multiNucleiEncounters	multiNucleiRoot	attrEncounters	attrRoot	problemTraversing	sameunitTreatment
+
