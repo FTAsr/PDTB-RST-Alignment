@@ -70,5 +70,6 @@ Indicator for overlapping arguments within the PDTB relation: whether the two ar
 The following columns provide some attributes of the RST relation matched with the PDTB relation in each row of the table:
 
 
+RST_Arg1IsRelation	RST_Arg1Span	RST_Arg1Diff	RST_Arg1Begin	RST_Arg1End	RST_Arg1Text	RST_Arg2IsRelation	RST_Arg2Span	RST_Arg2Diff	RST_Arg2Begin	RST_Arg2End	RST_Arg2Text	RST_RelationSpan
 
 
