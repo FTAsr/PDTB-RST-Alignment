@@ -11,60 +11,60 @@ The following columns provide some attributes of the PDTB relation in each row o
 ID of the WSJ article, i.e., the text file within the Penn Treebank where the PDTB relation was annotated.
 
 
-**OrderedID:**
+* **OrderedID:**
 ID of the PDTB discourse relation with respect to the charachter offset of the earliest occuring argument.
 
-**Relation:**
+* **Relation:**
 Type of relation (Explicit/Implicit/EntRel/AltLex) according to PDTB high-level classification.
 
-**Conn1:**
+* **Conn1:**
 Connective from the original text for Explicit relations, the alternative lexicalization for AltLex relations, or the connective inserted by PDTB annotators for Implicit relation. EntRel relations have EMPTY in this field.
 
-**Conn1Sense1:**
+* **Conn1Sense1:**
 Relation sense 1 with regard to Conn1 according to PDTB annotation.
 
-**Conn1Sense2:**
+* **Conn1Sense2:**
 Relation sense 2 if more than one relation was recognized for Conn1 according to PDTB annotation.
 
-**Conn2:**
+* **Conn2:**
 For some implicit relations, PDTB annotators decided to provide two possible discourse connectives. For other types of relations, this field will be EMPTY.
 
-**Conn2Sense1:**
+* **Conn2Sense1:**
 Relation sense 1 with regard to Conn2 according to PDTB annotation.
 
-**Conn2Sense2:**
+* **Conn2Sense2:**
 Relation sense 2 if more than one relation was recognized for Conn2 according to PDTB annotation.
 
-**PDTB_Arg1Begin:**
+* **PDTB_Arg1Begin:**
 The charachter offset of the begining of the first argument of the relation.
 
-**PDTB_Arg1End:**
+* **PDTB_Arg1End:**
 The charachter offset of the end of the first argument of the relation.
 
-**PDTB_Arg1Text:**
+* **PDTB_Arg1Text:**
 The text content of the first argument.
 
-**PDTB_Arg2Begin:**
+* **PDTB_Arg2Begin:**
 The charachter offset of the begining of the second argument of the relation.
 
-**PDTB_Arg2End:**
+* **PDTB_Arg2End:**
 The charachter offset of the end of the second argument of the relation.
 
-**PDTB_Arg2Text:**
+* **PDTB_Arg2Text:**
 The text content of the second argument.
 
-**PDTB_Arg1SpansNo:**
+* **PDTB_Arg1SpansNo:**
 The number of text spans (according to PDTB segmentations) included in the first argument.
 
-**PDTB_Arg1Spans:**
+* **PDTB_Arg1Spans:**
 The text spans (according to PDTB segmentations) included in the first argument.
 
-**PDTB_Arg2SpansNo:**
+* **PDTB_Arg2SpansNo:**
 The number of text spans (according to PDTB segmentations) included in the second argument.
 
-**PDTB_Arg2Spans:**
+* **PDTB_Arg2Spans:**
 The text spans (according to PDTB segmentations) included in the second argument.
 
-**PDTB_ArgOverlap:**
+* **PDTB_ArgOverlap:**
 Indicator for overlapping arguments within the PDTB relation: whether the two arguments covered any common charachters in the text.
 
