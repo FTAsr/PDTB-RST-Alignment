@@ -116,11 +116,52 @@ The name (type/sense) of the matched RST relation.
 ## Alignment qualification columns
 The following columns provide some information about the quality of the alignment obtained for each PDTB relation. These include integer and boolian features. Integer features provide some information about the structure of the RST relational tree aligned with the PDTB relation and boolean features are indicators of possible alignment mistakes, i.e., suspicious cases that were flagged during the automatic alignment procedure for furthur manual investigation. All of these features are extensively and visually explained in the paper, thus we only provide a brief definition of them in this document.
 
+* **arg1Sats:**
+Number of intevening Satelite edges between the RST span considered as the match of the first argument of the PDTB relation and the root of the matched RST relation's tree. 
+
+* **arg1Nucs:**
+Number of intevening Nucleus edges between the RST span considered as the match of the first argument of the PDTB relation and the root of the matched RST relation's tree. 	
+
+* **arg2Sats:**
+Number of intevening Satelite edges between the RST span considered as the match of the second argument of the PDTB relation and the root of the matched RST relation's tree. 
+
+* **arg2Nucs:**
+Number of intevening Nucleus edges between the RST span considered as the match of the second argument of the PDTB relation and the root of the matched RST relation's tree. 	
 
 * **Sats:**
-Number of intevening Satelite edges between the two RST spans considered as PDTB relational argument matches. This number is obtained by traversing the matched RST relation's sub-tree. 
+Number of intevening Satelite edges between the two RST spans considered as PDTB relational argument matches. This number is obtained by traversing the matched RST relation's tree and is equal to the sum of arg1Sats and arg2Sats. 
 
 * **Nucs:**
+Number of intevening Satelite edges between the two RST spans considered as PDTB relational argument matches. This number is obtained by traversing the matched RST relation's tree and is equal to the sum of arg1Nucs and arg2Nucs. 
 
-arg1Sats	arg1Nucs	arg2Sats	arg2Nucs		revise	strictRevise	multiNucleiEncounters	multiNucleiRoot	attrEncounters	attrRoot	problemTraversing	sameunitTreatment
+* **problemTraversing:**
+If any of the above Sat and Nuc flags is a negative number it means that traversing the path between the two relational arguments had a problem. This happens due to a variety of reasons that are extensively explained in the paper.
+
+* **extraSpans:**
+The alignment procedure to find the RST relation that covers both RST spans (matched with the first and second PDTB relational arguments) is based centrally on the number of extra spans between the matched arguments. This numbers tells us how much extra text *had to* be included within the minimal tree. In a lot of alignments this number is zero, which means the RST relation looks very similar to the PDTB relation no intervening text spans between the two relational arguments). Alignments that have large number of extraSpans or a negative number in this column need to be examined manually. 
+
+* **revise:**
+If any of the above Sat and Nuc flags or extraSpans is a negative number then the alignment is flagged to be revised manually. This is indicative of various suspicious alignments that are extensively explained in the paper. Some of these alignments pass the manual checking test, and some do not.
+
+* **strictRevise:**
+This flag is specifically designated to additionally mark cases of alignment in which the *strict nuclearity principle* is likely violated; that is when there exists an intervening satelite edge in the path between the two RST spans matched with the two PDTB relational arguments. Please refer to the paper for definition of the neuclearity principle and how it should be handeled in a theoretical study.
+
+* **multiNucleiEncounters:**
+This flag is incremented during traversing the three (from one argument matching RST span to the other). It is the count of multi-nuclei nodes in the path between the arguments within the RST relation three.
+
+* **multiNucleiRoot:**
+This flag is set if the root of the RST relation tree is a multi-nuclei relation.
+
+* **attrEncounters:**
+This flag is incremented during traversing the three (from one argument matching RST span to the other). It is the count of attribution nodes in the path between the arguments within the RST relation three.
+
+* **attrRoot:**
+This flag is set if the root of the RST relation tree is an attribution relation.
+
+* **sameunitTreatment:**
+This flag is set if sameunit treatment is applied during the alignment procedure. Same-unit relations are specific to RST framework and are usually taken as one single text span in PDTB segmentation. In order to find the best matching RST relation that covers the two relational arguments we had to curate the algorithm to skip Same-unit relations. This procedure is discussed in the paper.
+
+
+
+
 
