@@ -135,13 +135,13 @@ Number of intevening Satelite edges between the two RST spans considered as PDTB
 Number of intevening Satelite edges between the two RST spans considered as PDTB relational argument matches. This number is obtained by traversing the matched RST relation's tree and is equal to the sum of arg1Nucs and arg2Nucs. 
 
 * **problemTraversing:**
-If any of the above Sat and Nuc flags is a negative number it means that traversing the path between the two relational arguments had a problem. This happens due to a variety of reasons that are extensively explained in the paper.
+If any of the above Sat and Nuc flags is a negative number it means that traversing the path between the two relational arguments had a problem and the alignment is suspicious, usually due to overlapping relational arguments.
 
 * **extraSpans:**
-The alignment procedure to find the RST relation that covers both RST spans (matched with the first and second PDTB relational arguments) is based centrally on the number of extra spans between the matched arguments. This numbers tells us how much extra text *had to* be included within the minimal tree. In a lot of alignments this number is zero, which means the RST relation looks very similar to the PDTB relation no intervening text spans between the two relational arguments). Alignments that have large number of extraSpans or a negative number in this column need to be examined manually. 
+The alignment procedure to find the RST relation that covers both RST spans (matched with the first and second PDTB relational arguments) is based centrally on the number of extra spans between the matched arguments. This number gives an idea of how much extra text *had to* be included within the minimal tree. In a lot of alignments this number is zero, which means the RST relation looks very similar to the PDTB relation (no intervening text spans between the two relational arguments). Alignments that have large number of extraSpans or a negative number in this column need to be examined manually. 
 
 * **revise:**
-If any of the above Sat and Nuc flags or extraSpans is a negative number then the alignment is flagged to be revised manually. This is indicative of various suspicious alignments that are extensively explained in the paper. Some of these alignments pass the manual checking test, and some do not.
+If any of the above Sat and Nuc flags or extraSpans is a negative number then the alignment is flagged as a suspicious case to be revised manually. This flag can be indicative of various problematic alignments (unmatchable relations) that are extensively explained in the paper. Some of these alignments pass the manual checking test, and some do not.
 
 * **strictRevise:**
 This flag is specifically designated to additionally mark cases of alignment in which the *strict nuclearity principle* is likely violated; that is when there exists an intervening satelite edge in the path between the two RST spans matched with the two PDTB relational arguments. Please refer to the paper for definition of the neuclearity principle and how it should be handeled in a theoretical study.
