@@ -1,5 +1,10 @@
 # PDTB-RST-Alignment
 
+This project includes:
+* The pdtb-rst relation mapping table in csv format
+* An individual java code file (a component in a larger pipline for text processing -- private project) for transparency on the details of the mapping process using the two corpuses of discourse relations.
+
+
 The alignment table includes 6757 rows, equivalent to the number of PDTB relations that have been aligned with an RST relation from the RST-DT corpus. Columns of this table provide some basic information about the source relation extracted from PDTB, the target relation extracted from RST-DT, and the quality of the alignment between the two. These three gropups of columns will be introduced in this document. The mapping between relation instances from PDTB to RST-DT is one-to-many. This means that each PDTB relation is uniquely mapped to one RST relation, however, a given RST relation might have been selected as the best fit to more than one PDTB relation, thus might appear in more than one row of the table as the matched relation. Suspicious alignments are flagged in the paper using the last group of columns.  Please refer to the paper for detailed information on the mapping procedure as well as discussions on suspicious alignments.
 
 ## PDTB columns
